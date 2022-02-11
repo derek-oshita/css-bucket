@@ -4,7 +4,28 @@
   box-sizing: border-box;
 }
 
+h1 {
+  color: #9400d3;
+  font-weight: 600;
+  font-size: 3rem;
+  opacity: 0.8;
+}
+
+h2,
+p {
+  color: #9932cc;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+h3 {
+  color: #9400d3;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
 main {
+  font-family: "Poppins", sans-serif;
   min-height: 100vh;
   background: linear-gradient(to right top, #274b74, #8233c5, #e963fd);
   display: flex;
@@ -25,6 +46,7 @@ main {
   border-radius: 2rem;
   z-index: 1;
   backdrop-filter: blur(2rem);
+  display: flex;
 }
 
 .circle1,
@@ -49,4 +71,144 @@ main {
 .circle2 {
   top: 5%;
   left: 10%;
+}
+
+#mila-photo {
+  height: 8rem;
+  width: 7rem;
+  border-radius: 50%;
+}
+
+.icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+.album-cover {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 1.5rem;
+}
+
+.dashboard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+}
+
+.link {
+  display: flex;
+  margin: 2rem 0rem;
+  padding: 1rem 5rem;
+  align-items: center;
+}
+
+.link h2 {
+  padding: 0rem 2rem;
+}
+
+.albums {
+  flex: 2;
+}
+
+.pro {
+  background: linear-gradient(to right top, #274b74, #8233c5, #e963fd);
+  border-radius: 2rem;
+  color: white;
+  padding: 1rem;
+  position: relative;
+}
+
+.pro h2 {
+  width: 40%;
+  color: white;
+  font-weight: 600;
+}
+
+#tennis_ball {
+  height: 8rem;
+  width: 8rem;
+  position: absolute;
+  top: 5%;
+  left: 25%;
+}
+
+/* ALBUMS */
+
+.status {
+  margin-bottom: 3rem;
+}
+
+.status input {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border: none;
+  width: 50%;
+  padding: 0.5rem;
+  border-radius: 2rem;
+}
+
+.albums {
+  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex: 1;
+}
+
+.card {
+  display: flex;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.5)
+  );
+  border-radius: 1rem;
+  margin: 2rem 0rem;
+  padding: 2rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+  justify-content: space-between;
+}
+
+.rating {
+  background: linear-gradient(to right top, #274b74, #8233c5, #e963fd);
+  width: 100%;
+  height: 25%;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.rating::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgb(236, 236, 236);
+  position: absolute;
+  left: 90%;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.percentage {
+  font-weight: bold;
+  background: linear-gradient(to right top, #274b74, #8233c5, #e963fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
