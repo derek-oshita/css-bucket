@@ -1,20 +1,22 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import Stack from "@mui/material/Stack";
+import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 
 export default function PrimaryButton(props) {
   const { text, onClick } = props;
   return (
-    <Stack spacing={2} direction="row">
+    <Box>
       <Button
-        style={{ backgroundColor: "red" }}
+        style={{
+          background: "linear-gradient(to right, #ff0800, #e32636)",
+        }}
         variant="contained"
         onClick={onClick}
       >
         {text || "Untitled"}
       </Button>
-    </Stack>
+    </Box>
   );
 }
 
