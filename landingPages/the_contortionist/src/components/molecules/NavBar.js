@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-
+import * as React from "react";
 import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
+import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
@@ -12,8 +10,8 @@ import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 
-export default function NavBar() {
-  const [state, setState] = useState({
+export default function SwipeableTemporaryDrawer() {
+  const [state, setState] = React.useState({
     top: false,
     left: false,
     bottom: false,
@@ -22,6 +20,7 @@ export default function NavBar() {
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (
+      event &&
       event.type === "keydown" &&
       (event.key === "Tab" || event.key === "Shift")
     ) {
@@ -65,19 +64,18 @@ export default function NavBar() {
   return (
     <div>
       {["left", "right", "top", "bottom"].map((anchor) => (
-        <Fragment key={anchor}>
+        <React.Fragment key={anchor}>
           <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
-          <Drawer
+          <SwipeableDrawer
             anchor={anchor}
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
+            onOpen={toggleDrawer(anchor, true)}
           >
             {list(anchor)}
-          </Drawer>
-        </Fragment>
+          </SwipeableDrawer>
+        </React.Fragment>
       ))}
     </div>
   );
 }
-
-NavBar.propTypes = {};

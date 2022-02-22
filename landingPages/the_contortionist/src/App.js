@@ -1,4 +1,3 @@
-import MainSection from "./components/organisms/MainSection";
 import NavBar from "./components/molecules/NavBar";
 
 import "./App.css";
