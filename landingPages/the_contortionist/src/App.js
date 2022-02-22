@@ -1,13 +1,12 @@
-import PrimaryButton from "./components/atoms/PrimaryButton";
-import Logo from "./components/atoms/Logo";
+import MainSection from "./components/organisms/MainSection";
+import NavBar from "./components/molecules/NavBar";
 
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <PrimaryButton />
-      <Logo />
+      <NavBar />
     </div>
   );
 }
