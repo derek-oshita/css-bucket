@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import Button from "@mui/material/Button";
 import ToggleButton from "@mui/material/ToggleButton";
 import FormatAlignJustifyIcon from "@mui/icons-material/FormatAlignJustify";
@@ -21,3 +22,7 @@ export default function NavToggleButton({ onClick }) {
     </ToggleButton>
   );
 }
+
+NavToggleButton.propTypes = {
+  onClick: PropTypes.func.isRequired,
+};
