@@ -1,20 +1,15 @@
-import React, { Fragment } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
-import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
-import ToggleButton from "@mui/material/ToggleButton";
-import FormatAlignCenterIcon from "@mui/icons-material/FormatAlignCenter";
 import NavToggleButton from "../atoms/NavToggleButton";
 
 export default function SwipeableTemporaryDrawer() {
-  const [state, setState] = React.useState({
+  const [state, setState] = useState({
     right: false,
   });
 
@@ -30,34 +25,27 @@ export default function SwipeableTemporaryDrawer() {
     setState({ ...state, [anchor]: open });
   };
 
-  const list = (anchor) => (
+  const renderList = (anchor) => (
     <Box
       sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      {/* <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+      <List>
+        {["Home", "Music", "Tour Dates", "Contact"].map((text, index) => (
+          // TODO: Add anchor tag or Link component here
           <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
+            <ListItemText
+              primary={text}
+              sx={{
+                color: "white",
+              }}
+            />
           </ListItem>
         ))}
       </List>
       <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List> */}
     </Box>
   );
 
@@ -69,12 +57,17 @@ export default function SwipeableTemporaryDrawer() {
           <NavToggleButton onClick={toggleDrawer(anchor, true)} />
           {/* DRAWER */}
           <SwipeableDrawer
+            PaperProps={{
+              style: {
+                backgroundColor: "black",
+              },
+            }}
             anchor={anchor}
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
             onOpen={toggleDrawer(anchor, true)}
           >
-            {list(anchor)}
+            {renderList(anchor)}
           </SwipeableDrawer>
         </Box>
       ))}
