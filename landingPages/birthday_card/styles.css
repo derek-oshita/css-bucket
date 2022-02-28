@@ -4,7 +4,14 @@
   box-sizing: border-box;
 }
 
-img {
-  position: absolute;
-  z-index: -1;
+main {
+  display: flex;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
 }
