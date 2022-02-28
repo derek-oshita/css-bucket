@@ -1,3 +1,10 @@
 * {
-  background-color: green;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  position: absolute;
+  z-index: -1;
 }
