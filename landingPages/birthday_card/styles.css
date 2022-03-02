@@ -87,7 +87,7 @@ h2 {
   }
 
   #image-section {
-    height: 80vh;
+    height: 65vh;
     width: 100vw;
   }
 
@@ -113,6 +113,7 @@ h2 {
   }
 
   #body-container p {
+    font-size: 0.9rem;
     padding: 0.3rem;
   }
 }
