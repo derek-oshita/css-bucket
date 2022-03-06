@@ -55,6 +55,7 @@ export default function SwipeableTemporaryDrawer() {
         sx={{
           position: "fixed",
           backgroundColor: "transparent",
+          boxShadow: "none",
         }}
       >
         {["right"].map((anchor) => (
