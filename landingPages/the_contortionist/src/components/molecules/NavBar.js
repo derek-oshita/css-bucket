@@ -54,10 +54,11 @@ export default function SwipeableTemporaryDrawer() {
       <AppBar
         sx={{
           position: "fixed",
+          backgroundColor: "transparent",
         }}
       >
         {["right"].map((anchor) => (
-          <Box key={anchor} sx={{ backgroundColor: "rgba(0,0,0,1)" }}>
+          <Box key={anchor}>
             <NavToggleButton onClick={toggleDrawer(anchor, true)} />
             <SwipeableDrawer
               PaperProps={{
