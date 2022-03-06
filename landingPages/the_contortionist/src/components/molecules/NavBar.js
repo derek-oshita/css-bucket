@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import List from "@mui/material/List";
@@ -39,7 +38,7 @@ export default function SwipeableTemporaryDrawer() {
             <ListItemText
               primary={text}
               sx={{
-                color: "white",
+                color: "primary.main",
               }}
             />
           </ListItem>

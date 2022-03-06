@@ -5,9 +5,8 @@ import Typography from "@mui/material/Typography";
 
 export default function Logo() {
   return (
-    // <Box sx={{ p: 2, backgroundColor: "black" }}>
     <Box sx={{ p: 2 }}>
-      <Typography variant="h1" style={{ color: "white", fontSize: "5em" }}>
+      <Typography variant="h1" sx={{ color: "white", fontSize: "5em" }}>
         THE CONTORTIONIST
       </Typography>
     </Box>

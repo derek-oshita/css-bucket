@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import Button from "@mui/material/Button";
 import ToggleButton from "@mui/material/ToggleButton";
 import FormatAlignJustifyIcon from "@mui/icons-material/FormatAlignJustify";
 
@@ -12,7 +11,7 @@ export default function NavToggleButton({ onClick }) {
       sx={{
         cursor: "pointer",
         backgroundColor: "black",
-        color: "white",
+        color: "primary.main",
         "&.MuiButtonBase-root:hover": {
           bgcolor: "transparent",
         },
