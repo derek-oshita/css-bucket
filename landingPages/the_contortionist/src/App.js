@@ -7,6 +7,13 @@ function App() {
   return (
     <div className="App">
       <MainSection />
+      <Box
+        sx={{
+          height: "100vh",
+          width: "100vh",
+          backgroundColor: "green",
+        }}
+      ></Box>
     </div>
   );
 }

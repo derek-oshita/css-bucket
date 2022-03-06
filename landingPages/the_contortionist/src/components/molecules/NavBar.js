@@ -6,6 +6,7 @@ import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import NavToggleButton from "../atoms/NavToggleButton";
+import AppBar from "@mui/material/AppBar";
 
 export default function SwipeableTemporaryDrawer() {
   const [state, setState] = useState({
@@ -50,26 +51,52 @@ export default function SwipeableTemporaryDrawer() {
 
   return (
     <div>
-      {["right"].map((anchor) => (
-        <Box key={anchor}>
-          {/* TOGGLE BUTTON */}
-          <NavToggleButton onClick={toggleDrawer(anchor, true)} />
-          {/* DRAWER */}
-          <SwipeableDrawer
-            PaperProps={{
-              style: {
-                backgroundColor: "black",
-              },
-            }}
-            anchor={anchor}
-            open={state[anchor]}
-            onClose={toggleDrawer(anchor, false)}
-            onOpen={toggleDrawer(anchor, true)}
-          >
-            {renderList(anchor)}
-          </SwipeableDrawer>
-        </Box>
-      ))}
+      <AppBar
+        sx={{
+          position: "fixed",
+        }}
+      >
+        {["right"].map((anchor) => (
+          <Box key={anchor} sx={{ backgroundColor: "rgba(0,0,0,1)" }}>
+            <NavToggleButton onClick={toggleDrawer(anchor, true)} />
+            <SwipeableDrawer
+              PaperProps={{
+                style: {
+                  backgroundColor: "black",
+                },
+              }}
+              anchor={anchor}
+              open={state[anchor]}
+              onClose={toggleDrawer(anchor, false)}
+              onOpen={toggleDrawer(anchor, true)}
+            >
+              {renderList(anchor)}
+            </SwipeableDrawer>
+          </Box>
+        ))}
+      </AppBar>
     </div>
   );
 }
+
+/* 
+
+{["right"].map((anchor) => (
+  <Box key={anchor}>
+    <NavToggleButton onClick={toggleDrawer(anchor, true)} />
+    <SwipeableDrawer
+      PaperProps={{
+        style: {
+          backgroundColor: "black",
+        },
+      }}
+      anchor={anchor}
+      open={state[anchor]}
+      onClose={toggleDrawer(anchor, false)}
+      onOpen={toggleDrawer(anchor, true)}
+    >
+      {renderList(anchor)}
+    </SwipeableDrawer>
+  </Box>
+))}
+*/

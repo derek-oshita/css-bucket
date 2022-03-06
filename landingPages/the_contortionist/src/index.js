@@ -8,7 +8,7 @@ import "./index.css";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#F88379",
+      main: "#F88379", // this is the pink/orange color
     },
     secondary: {
       main: "#ffcc80",

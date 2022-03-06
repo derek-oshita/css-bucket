@@ -6,8 +6,6 @@ export default function NavToggleButton({ onClick }) {
   return (
     <ToggleButton
       onClick={onClick}
-      value="justify"
-      key="justify"
       sx={{
         cursor: "pointer",
         backgroundColor: "black",

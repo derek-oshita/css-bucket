@@ -8,15 +8,17 @@ import PrimaryButton from "../atoms/PrimaryButton";
 
 export default function MainSection() {
   return (
-    <Box
-      sx={{
-        height: "100vh",
-        width: "100vw",
-        backgroundColor: "black",
-      }}
-    >
-      <NavBar />
-      <Logo></Logo>
-    </Box>
+    <>
+      <Box
+        sx={{
+          height: "100vh",
+          width: "100vw",
+          backgroundColor: "black",
+        }}
+      >
+        <NavBar />
+        <Logo></Logo>
+      </Box>
+    </>
   );
 }
