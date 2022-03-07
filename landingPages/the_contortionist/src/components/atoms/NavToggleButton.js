@@ -8,11 +8,9 @@ export default function NavToggleButton({ onClick }) {
       onClick={onClick}
       sx={{
         cursor: "pointer",
-        backgroundColor: "black",
+        backgroundColor: "transparent",
         color: "primary.main",
-        "&.MuiButtonBase-root:hover": {
-          bgcolor: "transparent",
-        },
+        border: "none",
       }}
     >
       <FormatAlignJustifyIcon />
