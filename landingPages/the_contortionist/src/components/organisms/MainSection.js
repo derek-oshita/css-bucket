@@ -16,7 +16,7 @@ export default function MainSection() {
           backgroundColor: "black",
         }}
       >
-        <NavBar sx={{ zIndex: 2 }} />
+        <NavBar />
         <Logo></Logo>
       </Box>
     </>

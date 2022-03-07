@@ -59,7 +59,7 @@ export default function SwipeableTemporaryDrawer() {
         }}
       >
         {["right"].map((anchor) => (
-          <Box key={anchor}>
+          <Box key={anchor} sx={{ position: "absolute", right: 0 }}>
             <NavToggleButton onClick={toggleDrawer(anchor, true)} />
             <SwipeableDrawer
               PaperProps={{
