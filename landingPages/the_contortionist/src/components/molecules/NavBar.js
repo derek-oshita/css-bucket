@@ -5,8 +5,10 @@ import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
-import NavToggleButton from "../atoms/NavToggleButton";
 import AppBar from "@mui/material/AppBar";
+import ClearIcon from "@mui/icons-material/Clear";
+import IconButton from "@mui/material/IconButton";
+import NavToggleButton from "../atoms/NavToggleButton";
 
 export default function SwipeableTemporaryDrawer() {
   const [state, setState] = useState({
@@ -33,6 +35,13 @@ export default function SwipeableTemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
+        <ListItem
+          // button
+          key="closeIcon"
+          sx={{ display: "flex", justifyContent: "flex-end" }}
+        >
+          <ClearIcon sx={{ color: "white" }} />
+        </ListItem>
         {["Home", "Music", "Tour Dates", "Contact"].map((text, index) => (
           // TODO: Add anchor tag or Link component here
           <ListItem button key={text}>
@@ -64,7 +73,7 @@ export default function SwipeableTemporaryDrawer() {
             <SwipeableDrawer
               PaperProps={{
                 style: {
-                  backgroundColor: "black",
+                  backgroundColor: "#1B1B1B",
                 },
               }}
               anchor={anchor}
