@@ -11,6 +11,7 @@ export default function NavToggleButton({ onClick }) {
         backgroundColor: "transparent",
         color: "primary.main",
         border: "none",
+        mr: 2,
       }}
     >
       <FormatAlignJustifyIcon />
