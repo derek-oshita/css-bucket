@@ -12,20 +12,25 @@ export default function MainSection() {
     <>
       <Box
         sx={{
+          ...parallaxBackgroundStyles,
           height: "100vh",
           width: "100vw",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
-        <img
-          src={BackgroundImage}
-          style={{
-            height: "100%",
-            width: "100%",
-          }}
-        />
-        <NavBar sx={{ zIndex: 1 }} />
+        <NavBar sx={{ marginTop: "50%", marginLeft: "50%" }} />
         <Logo />
       </Box>
     </>
   );
 }
+
+const parallaxBackgroundStyles = {
+  backgroundImage: `url(${BackgroundImage})`,
+  backgroundAttachment: "fixed",
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover",
+};

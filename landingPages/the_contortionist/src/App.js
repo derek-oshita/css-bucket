@@ -18,7 +18,7 @@ function App() {
         sx={{
           height: "100vh",
           width: "100vh",
-          backgroundColor: "green",
+          backgroundColor: "black",
         }}
       ></Box>
     </div>
