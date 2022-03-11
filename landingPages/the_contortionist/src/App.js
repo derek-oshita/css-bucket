@@ -6,7 +6,14 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <MainSection />
+      <Box
+        sx={{
+          height: "100vh",
+          width: "100vh",
+        }}
+      >
+        <MainSection />
+      </Box>
       <Box
         sx={{
           height: "100vh",

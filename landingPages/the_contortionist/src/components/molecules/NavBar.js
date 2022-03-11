@@ -36,7 +36,7 @@ export default function SwipeableTemporaryDrawer() {
     >
       <List>
         <ListItem
-          // button
+          button
           key="closeIcon"
           sx={{ display: "flex", justifyContent: "flex-end" }}
         >
