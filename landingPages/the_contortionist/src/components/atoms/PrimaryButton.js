@@ -9,13 +9,15 @@ export default function PrimaryButton(props) {
     <Box sx={{ p: 2 }}>
       <Button
         style={{
-          background: "linear-gradient(to right, #ff0800, #e32636)",
+          background: "primary.main",
+          color: "white",
+          minWidth: "7em",
         }}
         component="span"
         variant="contained"
         onClick={onClick}
       >
-        {text || "Untitled"}
+        <strong>{text || "Untitled"}</strong>
       </Button>
     </Box>
   );
