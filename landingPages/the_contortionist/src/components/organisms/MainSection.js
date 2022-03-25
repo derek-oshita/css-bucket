@@ -17,7 +17,6 @@ export default function MainSection() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          margin: 0,
           ...parallaxBackgroundStyles,
         }}
       >

@@ -15,13 +15,13 @@ function App() {
       >
         <MainSection />
       </Box>
-      {/* <Box
+      <Box
         sx={{
           height: "100vh",
           width: "100vh",
           backgroundColor: "black",
         }}
-      ></Box> */}
+      ></Box>
     </div>
   );
 }
