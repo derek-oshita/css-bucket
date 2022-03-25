@@ -1,22 +1,21 @@
 import Box from "@mui/material/Box";
 import MainSection from "./components/organisms/MainSection";
-import PrimaryButton from "./components/atoms/PrimaryButton";
+import PrimaryButon from "./components/atoms/PrimaryButton";
 
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <PrimaryButton id="shop-button" text={"Shop"} />
-      {/* <Box
+      <Box
         sx={{
           height: "100vh",
-          width: "100vh",
+          width: "100%",
         }}
       >
         <MainSection />
       </Box>
-      <Box
+      {/* <Box
         sx={{
           height: "100vh",
           width: "100vh",

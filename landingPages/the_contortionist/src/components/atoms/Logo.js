@@ -15,12 +15,17 @@ export default function Logo() {
         variant="h1"
         sx={{
           color: "white",
-          fontSize: "5em",
+          fontSize: {
+            xs: "2em",
+            sm: "3.5em",
+            md: "5em",
+          },
           backgroundColor: "transparent",
           boxShadow: "none",
+          lineHeight: 0,
         }}
       >
-        <animated.h4 style={animatedProps}>THE CONTORTIONIST</animated.h4>;
+        <animated.h4 style={animatedProps}>THE CONTORTIONIST</animated.h4>
       </Typography>
     </Box>
   );

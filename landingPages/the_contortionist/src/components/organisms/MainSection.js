@@ -12,16 +12,20 @@ export default function MainSection() {
     <>
       <Box
         sx={{
-          ...parallaxBackgroundStyles,
-          height: "100vh",
-          width: "100vw",
+          height: "100%",
+          width: "100%",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          margin: 0,
+          ...parallaxBackgroundStyles,
         }}
       >
         <NavBar sx={{ marginTop: "50%", marginLeft: "50%" }} />
-        <Logo />
+        <Box>
+          <Logo />
+          <PrimaryButton text="SHOP" />
+        </Box>
       </Box>
     </>
   );
